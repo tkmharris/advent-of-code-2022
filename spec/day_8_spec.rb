@@ -1,5 +1,5 @@
 require_relative '../answers/answers'
-require_relative "../../solutions/day_8"
+require_relative "../solutions/day_8"
 
 describe Day8 do
   describe '#part_1' do
