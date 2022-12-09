@@ -1,0 +1,24 @@
+require_relative '../lib/utils'
+
+class Day<<day>>
+  include AoCUtils
+
+  attr_reader :day, :input
+  def initialize
+    @day = <<day>>
+    @input = read_input.split("\n")
+  end
+
+  def part_1
+  end
+
+  def part_2
+  end
+
+  private
+end
+
+### MAIN
+solver = Day<<day>>.new
+puts solver.part_1
+puts solver.part_2
