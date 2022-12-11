@@ -26,14 +26,9 @@ class Day11
     monkeys = parse_input.map do |monkey|
       [monkey.number, monkey]
     end.to_h
-
-    worry_cap = 1
-    monkeys.values.each do |monkey|
-      worry_cap *= monkey.divisor
-    end
     
     10000.times do
-      play_round(monkeys, worry_cap: worry_cap, extra_worry: true)
+      play_round(monkeys, worry_cap: worry_cap(monkeys), extra_worry: true)
     end
 
     inspections_product_output(monkeys)
@@ -71,6 +66,10 @@ class Day11
     end.sort.reverse
     
     ranked_inspections[0] * ranked_inspections[1]
+  end
+
+  def worry_cap(monkeys)
+    monkeys.values.map {|monkey| monkey.divisor }.inject(:*)
   end
 
   class Item
