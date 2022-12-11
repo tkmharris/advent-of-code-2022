@@ -1,5 +1,4 @@
 require_relative '../lib/utils'
-require 'pry'
 
 class Day10
   include AoCUtils
