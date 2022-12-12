@@ -3,17 +3,16 @@ require_relative '../lib/utils'
 class Day11
   include AoCUtils
 
-  attr_reader :day, :input
+  attr_reader :day
+  attr_accessor :monkeys
   def initialize
     @day = 11
-    @input = read_input
+    @monkeys = parse_input(read_input).map do |monkey|
+      [monkey.number, monkey]
+    end.to_h
   end
 
   def part_1
-    monkeys = parse_input.map do |monkey|
-      [monkey.number, monkey]
-    end.to_h
-    
     20.times do
       play_round(monkeys)
     end
@@ -22,10 +21,6 @@ class Day11
   end
 
   def part_2
-    monkeys = parse_input.map do |monkey|
-      [monkey.number, monkey]
-    end.to_h
-    
     10000.times do
       play_round(monkeys, worry_cap: worry_cap(monkeys), extra_worry: true)
     end
@@ -35,7 +30,7 @@ class Day11
 
   private
 
-  def parse_input
+  def parse_input(input)
     matches = input.
       to_enum(:scan, Monkey.monkey_matcher).
       map { Regexp.last_match }

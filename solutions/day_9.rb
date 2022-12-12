@@ -52,35 +52,6 @@ class Day9
 
   private
 
-  class Vec
-    attr_accessor :x, :y
-
-    def initialize(x, y)
-      @x = x
-      @y = y
-    end
-
-    def ==(other)
-      x == other.x && y == other.y
-    end
-
-    def eql?(other)
-      self == other
-    end
-
-    def hash
-      [x, y].hash
-    end
-    
-    def +(other)
-      Vec.new(x + other.x, y + other.y)
-    end
-
-    def -(other)
-      Vec.new(x - other.x, y - other.y)
-    end
-  end
-
   class Knot
     attr_accessor :position, :parent
     def initialize(position, parent)
