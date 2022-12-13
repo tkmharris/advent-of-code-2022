@@ -45,12 +45,12 @@ ANSWERS = {
     part_2: 32333418600
   },
   day_12: {
-    part_1: nil,
-    part_2: nil
+    part_1: 383,
+    part_2: 377
   },
   day_13: {
-    part_1: nil,
-    part_2: nil
+    part_1: 6428,
+    part_2: 22464
   },
   day_14: {
     part_1: nil,
