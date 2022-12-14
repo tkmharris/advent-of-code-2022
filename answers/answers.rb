@@ -53,8 +53,8 @@ ANSWERS = {
     part_2: 22464
   },
   day_14: {
-    part_1: nil,
-    part_2: nil
+    part_1: 979,
+    part_2: 29044
   },
   day_15: {
     part_1: nil,
