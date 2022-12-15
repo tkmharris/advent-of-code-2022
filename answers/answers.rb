@@ -58,7 +58,7 @@ ANSWERS = {
   },
   day_15: {
     part_1: 6078701,
-    part_2: nil
+    part_2: 12567351400528
   },
   day_16: {
     part_1: nil,
