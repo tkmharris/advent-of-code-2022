@@ -31,6 +31,15 @@ module AoCUtils
     def -(other)
       Vec.new(x - other.x, y - other.y)
     end
+    
+    def manhattan_norm
+      x.abs + y.abs
+    end
+
+    def manhattan_dist(other)
+      (self - other).manhattan_norm
+    end
+
   end
 end
 
